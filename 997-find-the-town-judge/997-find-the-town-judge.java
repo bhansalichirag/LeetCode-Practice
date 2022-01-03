@@ -17,12 +17,7 @@ class Solution {
         {
             if(entry.getValue()==n-1 && has_trust.getOrDefault(entry.getKey(),0)==0)
             {
-                if(result!=-1)
-                {
-                    return -1;
-                }
-                else
-                    result = entry.getKey();
+                return entry.getKey();
             }
         }
         return result;
