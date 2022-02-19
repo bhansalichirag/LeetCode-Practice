@@ -12,10 +12,6 @@ class Solution {
     public ListNode mergeKLists(ListNode[] lists) {
         ListNode li = new ListNode(0);
         ListNode li1 = li;
-        if(lists.length==0)
-            return null;
-        if(lists.length==1)
-            return lists[0];
         List<ListNode> li_node = new ArrayList<>();
         int num_null = 0;
         for(ListNode l : lists)
