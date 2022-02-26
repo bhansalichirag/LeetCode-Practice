@@ -1,6 +1,6 @@
 class Solution {
     HashMap<Integer,List<Integer>> asso = new HashMap<>();
-    List<Integer> takencourse = new ArrayList<>();
+    //List<Integer> takencourse = new ArrayList<>();
     public boolean canFinish(int numCourses, int[][] prerequisites) {
         for(int i=0;i<numCourses;i++)
         {
@@ -14,7 +14,7 @@ class Solution {
         {
             //System.out.println(course);
             num++;
-            takencourse.add(course);
+          //  takencourse.add(course);
             removecourse(course);
             course = getcourse();
         }
@@ -37,7 +37,8 @@ class Solution {
         for(Map.Entry<Integer,List<Integer>> entry : asso.entrySet())
         {
             //System.out.println(entry.getValue().size());
-            if(entry.getValue().size()==0 && !takencourse.contains(entry.getKey()))
+            if(entry.getValue().size()==0)
+                //&& !takencourse.contains(entry.getKey()))
             {
                 asso.remove(entry.getKey());
                 return entry.getKey();
