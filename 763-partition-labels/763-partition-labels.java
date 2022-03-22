@@ -13,7 +13,7 @@ class Solution {
         {
             int val = 1;
             int last = hm.get(s.charAt(count));
-            while(last<s.length() && last>count)
+            while(last>count)
             {
                 last = Math.max(last,hm.get(s.charAt(count)));
                 count++;
